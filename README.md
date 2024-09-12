@@ -1,12 +1,12 @@
 | Number | Function    | Done  | Testing  | Status  |
 |--------|-------------|---------|-------------|---------|
-| 01     | [isalpha](ft_isalpha.c)  | ✅       | ☐       | ☐       |
-| 02     | [isdigit](ft_isdigit.c) | ✅       |☐       | ☐       |
-| 03     | [isalnum](ft_isalnum.c)  | ✅       |☐       | ☐       |
-| 04     | [isascii](ft_isascii.c)  | ✅       |☐       | ☐       |
-| 05     | [isprint](ft_isprint.c)  | ✅       |☐       | ☐       |
-| 06     | [strlen](ft_strlen.c)   | ✅       |☐       | ☐       |
-| 07     | [memset](ft_memset.c)   | ✅       |☐       | ☐       |
+| 01     | [isalpha](ft_isalpha.c)  | ✅       | ✅      | ✅       |
+| 02     | [isdigit](ft_isdigit.c) | ✅       |✅       | ✅       |
+| 03     | [isalnum](ft_isalnum.c)  | ✅       |✅       | ✅       |
+| 04     | [isascii](ft_isascii.c)  | ✅       |✅       | ✅       |
+| 05     | [isprint](ft_isprint.c)  | ✅       |✅       | ✅       |
+| 06     | [strlen](ft_strlen.c)   | ✅       |✅       | ✅       |
+| 07     | [memset](ft_memset.c)   | ✅       |✅       | ✅       |
 | 08     | [bzero](ft_bzero.c)    | ✅       |☐       | ☐       |
 | 09     | [memcpy](ft_memcpy.c)   | ✅       |☐       | ☐       |
 | 10     | [memmove](ft_memmove.c)   | ✅       |☐       | ☐       |

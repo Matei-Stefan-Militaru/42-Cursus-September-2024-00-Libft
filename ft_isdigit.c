@@ -10,9 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <unistd.h>
+
 int	ft_isdigit(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
 	return (0);
 }
+/*
+int	main(void)
+{
+	char	c;
+	
+	c = '9';
+	if (ft_isdigit(c))
+		write(1, "c is a number", 13);
+	else
+		write(1, "c is not a number", 17);
+}
+*/

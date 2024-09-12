@@ -10,9 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <unistd.h>
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
+/*
+int	main(void)
+{
+	int	c;
+	
+	c = 130;
+	if (ft_isascii(c))
+		write(1, "c is ascii", 10);
+	else
+		write(1, "c is not ascii", 14);
+}
+*/

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <unistd.h>
+
 int	ft_isalnum(char c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
@@ -17,3 +19,15 @@ int	ft_isalnum(char c)
 		return (1);
 	return (0);
 }
+/*
+int	main(void)
+{
+	char	c;
+	
+	c =  ']';
+	if (ft_isalnum(c))
+		write(1, "c is alphanum", 13);
+	else
+		write(1, "c is not alphanum", 17);
+}
+*/

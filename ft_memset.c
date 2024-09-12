@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <unistd.h>
+
 void	ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*ptr;
@@ -22,3 +24,14 @@ void	ft_memset(void *s, int c, size_t n)
 		n--;
 	}
 }
+/*
+int	main(void)
+{
+	char	buffer[10];
+	
+	ft_memset(buffer, 'A', 10);
+	write(1, buffer, 10);
+	write(1, "\n", 1);
+	return (0);
+}
+*/

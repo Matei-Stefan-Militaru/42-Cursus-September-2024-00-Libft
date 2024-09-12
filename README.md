@@ -1,5 +1,5 @@
 | Number | Function    | Done  | Testing  | Status  |
-|--------|-------------|---------|
+|--------|-------------|---------|-------------|---------|
 | 01     | [isalpha](isalpha)  | ✅       | ☐       | ☐       |
 | 02     | [isdigit](isdigit) | ✅       |☐       | ☐       |
 | 03     | [isalnum](isalnum)  | ✅       |☐       | ☐       |

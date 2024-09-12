@@ -1,28 +1,28 @@
 | Number | Function    | Done  | Testing  | Status  |
 |--------|-------------|---------|-------------|---------|
-| 01     | [isalpha](isalpha)  | ✅       | ☐       | ☐       |
-| 02     | [isdigit](isdigit) | ✅       |☐       | ☐       |
-| 03     | [isalnum](isalnum)  | ✅       |☐       | ☐       |
-| 04     | [isascii](isascii)  | ✅       |☐       | ☐       |
-| 05     | [isprint](isprint)  | ✅       |☐       | ☐       |
-| 06     | [strlen](strlen)   | ✅       |☐       | ☐       |
-| 07     | [memset](memset)   | ✅       |☐       | ☐       |
-| 08     | [bzero](bzero)    | ✅       |☐       | ☐       |
-| 09     | [memcpy](memcpy)   | ✅       |☐       | ☐       |
-| 10     | [memmove](memmove)   | ✅       |☐       | ☐       |
-| 11     | [strlcpy](strlcpy)   | ✅       |☐       | ☐       |
-| 12     | [strlcat](strlcat)   | ✅       |☐       | ☐       |
-| 13     | [toupper](toupper)  | ✅       | ☐       | ☐       |
-| 14     | [tolower](tolower) | ✅       |☐       | ☐       |
-| 15     | [strchr](strchr)  | ✅       |☐       | ☐       |
-| 16     | [strrchr](strrchr)  | ✅       |☐       | ☐       |
-| 17     | [strncmp](strncmp)  | ✅       |☐       | ☐       |
-| 18     | [memchr](memchr)   | ✅       |☐       | ☐       |
-| 19     | [memcmp](memcmp)   | ✅       |☐       | ☐       |
-| 20     | [strnstr](strnstr)    | ✅       |☐       | ☐       |
-| 21     | [atoi](atoi)   | ✅       |☐       | ☐       |
-| 22     | [calloc](calloc)   | ✅       |☐       | ☐       |
-| 23     | [strdup](strdup)   | ✅       |☐       | ☐       |
+| 01     | [isalpha](ft_isalpha)  | ✅       | ☐       | ☐       |
+| 02     | [isdigit](ft_isdigit) | ✅       |☐       | ☐       |
+| 03     | [isalnum](ft_isalnum)  | ✅       |☐       | ☐       |
+| 04     | [isascii](ft_isascii)  | ✅       |☐       | ☐       |
+| 05     | [isprint](ft_isprint)  | ✅       |☐       | ☐       |
+| 06     | [strlen](ft_strlen)   | ✅       |☐       | ☐       |
+| 07     | [memset](ft_memset)   | ✅       |☐       | ☐       |
+| 08     | [bzero](ft_bzero)    | ✅       |☐       | ☐       |
+| 09     | [memcpy](ft_memcpy)   | ✅       |☐       | ☐       |
+| 10     | [memmove](ft_memmove)   | ✅       |☐       | ☐       |
+| 11     | [strlcpy](ft_strlcpy)   | ✅       |☐       | ☐       |
+| 12     | [strlcat](ft_strlcat)   | ✅       |☐       | ☐       |
+| 13     | [toupper](ft_toupper)  | ✅       | ☐       | ☐       |
+| 14     | [tolower](ft_tolower) | ✅       |☐       | ☐       |
+| 15     | [strchr](ft_strchr)  | ✅       |☐       | ☐       |
+| 16     | [strrchr](ft_strrchr)  | ✅       |☐       | ☐       |
+| 17     | [strncmp](ft_strncmp)  | ✅       |☐       | ☐       |
+| 18     | [memchr](ft_memchr)   | ✅       |☐       | ☐       |
+| 19     | [memcmp](ft_memcmp)   | ✅       |☐       | ☐       |
+| 20     | [strnstr](ft_strnstr)    | ✅       |☐       | ☐       |
+| 21     | [atoi](ft_atoi)   | ✅       |☐       | ☐       |
+| 22     | [calloc](ft_calloc)   | ✅       |☐       | ☐       |
+| 23     | [strdup](ft_strdup)   | ✅       |☐       | ☐       |
 | 24     | [K2](K2)   | ☐       |☐       | ☐       |
 
 | 25     | [A3](A3)  | ☐       | ☐       | ☐       |

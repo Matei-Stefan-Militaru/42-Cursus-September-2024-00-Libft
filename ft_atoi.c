@@ -78,7 +78,9 @@ void print_number(int n)
 
 int	main()
 {
-	const char *testStrings[] = {"42", "   -123", "0", "+12345", "-00056", "2147483647", "-217483648", "   +0", "abc123", "123abc", "", "  \t\n\r\v\f 456"};
+	const char *testStrings[] = {"42", "   -123", "0", "+12345", "-00056", 
+	"2147483647", "-217483648", "   +0", "abc123", "123abc", "", 
+	"  \t\n\r\v\f 456"};
 	int		numTests;
 	int		i;
 	

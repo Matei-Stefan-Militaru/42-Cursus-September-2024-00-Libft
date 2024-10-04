@@ -9,11 +9,11 @@
 | 07     | [memset](ft_memset.c)   | ✅       |✅       | ✅       |
 | 08     | [bzero](ft_bzero.c)    | ✅       |✅       |✅       |
 | 09     | [memcpy](ft_memcpy.c)   | ✅       |✅      | ✅       |
-| 10     | [memmove](ft_memmove.c)   | ✅       |☐       | ☐       |
-| 11     | [strlcpy](ft_strlcpy.c)   | ✅       |☐       | ☐       |
-| 12     | [strlcat](ft_strlcat.c)   | ✅       |☐       | ☐       |
-| 13     | [toupper](ft_toupper.c)  | ✅       | ☐       | ☐       |
-| 14     | [tolower](ft_tolower.c) | ✅       |☐       | ☐       |
+| 10     | [memmove](ft_memmove.c)   | ✅       |✅       | ✅       |
+| 11     | [strlcpy](ft_strlcpy.c)   | ✅       |✅       | ✅       |
+| 12     | [strlcat](ft_strlcat.c)   | ✅       |✅       | ✅       |
+| 13     | [toupper](ft_toupper.c)  | ✅       | ✅       | ✅       |
+| 14     | [tolower](ft_tolower.c) | ✅       |✅       | ✅      |
 | 15     | [strchr](ft_strchr.c)  | ✅       |☐       | ☐       |
 | 16     | [strrchr](ft_strrchr.c)  | ✅       |☐       | ☐       |
 | 17     | [strncmp](ft_strncmp.c)  | ✅       |☐       | ☐       |

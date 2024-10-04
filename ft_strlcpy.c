@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
@@ -23,10 +25,27 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	{
 		while (i < size - 1 && src[i] != '\0')
 		{
-			dest[i] += src[i];
+			dest[i] = src[i];
 			i++;
 		}
 		dest[i] = '\0';
 	}
 	return (src_len);
 }
+
+/*
+int	main()
+{
+	const char	*src = "Hello World";
+	char		dest[20];
+	size_t		copied_length;
+	
+	copied_length = ft_strlcpy(dest, src, sizeof(dest));
+	write(1, "Contenido de la cadena de origen: ", 35);
+	write(1, src, 12);
+	write(1, "\n", 1);
+	write(1, "Contenido de la cadena de destino: ", 37);
+	write(1, dest, 12);
+	write(1, "\n", 1);
+}
+*/

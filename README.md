@@ -7,8 +7,8 @@
 | 05     | [isprint](ft_isprint.c)  | ✅       |✅       | ✅       |
 | 06     | [strlen](ft_strlen.c)   | ✅       |✅       | ✅       |
 | 07     | [memset](ft_memset.c)   | ✅       |✅       | ✅       |
-| 08     | [bzero](ft_bzero.c)    | ✅       |☐       | ☐       |
-| 09     | [memcpy](ft_memcpy.c)   | ✅       |☐       | ☐       |
+| 08     | [bzero](ft_bzero.c)    | ✅       |✅       |✅       |
+| 09     | [memcpy](ft_memcpy.c)   | ✅       |✅      | ✅       |
 | 10     | [memmove](ft_memmove.c)   | ✅       |☐       | ☐       |
 | 11     | [strlcpy](ft_strlcpy.c)   | ✅       |☐       | ☐       |
 | 12     | [strlcat](ft_strlcat.c)   | ✅       |☐       | ☐       |
@@ -20,7 +20,7 @@
 | 18     | [memchr](ft_memchr.c)   | ✅       |☐       | ☐       |
 | 19     | [memcmp](ft_memcmp.c)   | ✅       |☐       | ☐       |
 | 20     | [strnstr](ft_strnstr.c)    | ✅       |☐       | ☐       |
-| 21     | [atoi](ft_atoi.c)   | ✅       |☐       | ☐       |
+| 21     | [atoi](ft_atoi.c)   | ✅       |✅       | ✅       |
 | 22     | [calloc](ft_calloc.c)   | ✅       |☐       | ☐       |
 | 23     | [strdup](ft_strdup.c)   | ✅       |☐       | ☐       |
 | 24     | [K2](K2)   | ☐       |☐       | ☐       |

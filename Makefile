@@ -1,32 +1,24 @@
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
-AR = ar
-RANLIB = ranlib
+NAME = libft.a
+CFLAGS = cc -Werror -Wextra -Wall
+FILES_C = $(wildcard *.c)
+OBJECTS = $(FILES_C:.c=.o)
 
-SRCS_DIR = srcs
-INCLUDES_DIR = includes
-OBJ_DIR = objs
+all: $(NAME)
 
-SRCS = $(wildcard $(SRCS_DIR)/*.c)
-OBJS = $(SRCS:$(SRCS_DIR)/%.c=$(OBJ_DIR)/%.o)
+$(NAME): $(OBJECTS)
+	ar rcs $(NAME) $(OBJECTS)
+	echo "$(NAME) << CREATED SUCCESSFULLY >>"
 
-LIB = libft.a
-
-all: $(LIB)
-
-$(LIB): $(OBJS)
-	@$(AR) rcs $@ $(OBJS)
-	@$(RANLIB) $@
-
-$(OBJ_DIR)/%.o: $(SRCS_DIR)/%.c
-	@mkdir -p $(OBJ_DIR)
-	@$(CC) $(CFLAGS) -I$(INCLUDES_DIR) -c $< -o $@
+%.o: %.c
+	$(CFLAGS) -c $< -o $@
 
 clean:
-	@rm -rf $(OBJ_DIR)
+	rm -f $(OBJECTS)
+	echo "$(OBJECTS) << SUCCESSFULLY REMOVED >>"
 
 fclean: clean
-	@rm -f $(LIB)
+	rm -f $(NAME)
+	echo "$(NAME) y $(OBJECTS) << SUCCESSFULLY REMOVED >>"
 
 re: fclean all
 

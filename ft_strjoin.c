@@ -1,28 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmilitar <mmilitar@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/12 01:30:09 by mmilitar          #+#    #+#             */
-/*   Updated: 2024/09/12 01:33:26 by mmilitar         ###   ########.fr       */
+/*   Created: 2024/10/05 16:55:38 by mmilitar          #+#    #+#             */
+/*   Updated: 2024/10/05 16:55:46 by mmilitar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	memcmp(const void *s1, const void *s2, size_t n)
-{
-	const unsigned char	*p1;
-	const unsigned char	*p2;
-	size_t			i;
 
-	p1 = (const unsigned char *)s1;
-	p2 = (const unsigned char *)s2;
-	i = 0;
-	while (i < n)
-	{
-		if (p1[i] != p2[i])
-			return (p1[i] - p2[i]);
-	}
-	return (0);
-}

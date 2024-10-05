@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
@@ -18,6 +18,7 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
+
 /*
 int	main(void)
 {

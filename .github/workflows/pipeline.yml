@@ -1,0 +1,184 @@
+name: Makefile CI
+permissions:
+  contents: write
+  actions: read
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    outputs:
+      found_phrase: ${{ steps.check_phrase.outputs.found_phrase }}
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Debug Info
+      run: |
+        echo "Current directory: $(pwd)"
+        echo "List of files:"
+        ls -la
+        echo "Environment variables:"
+        env
+        echo "Corremos instaladores principales:"
+        sudo apt install gcc clang libpq-dev libbsd-dev libncurses-dev valgrind build-essential nasm clang ghc cmake make libxext-dev libbsd-dev libpq-dev -y
+        sudo apt install python3-dev python3-pip -y
+        sudo apt install python3-dev python3-venv python3-wheel -y
+
+    - name: Limpiar dependencies
+      run: |
+        if [ -f "Makefile" ]; then
+            make fclean
+        else
+            echo "Makefile not found"
+            exit 1
+        fi
+    
+    - name: Install dependencies
+      run: |
+        if [ -f "Makefile" ]; then
+            make
+        else
+            echo "Makefile not found"
+            exit 1
+        fi
+
+    - name: Install dependencies bonus
+      run: |
+        if [ -f "Makefile" ]; then
+            make bonus
+        else
+            echo "Makefile not found"
+            exit 1
+        fi
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Cache Francinette
+      id: cache-francinette
+      uses: actions/cache@v3
+      with:
+        path: ~/francinette
+        key: francinette-${GITHUB_SHA}
+
+    - name: Install Francinette
+      if: steps.cache-francinette.outputs.cache-hit != 'true'
+      run: |
+        sudo apt-get update
+        git clone --depth=1 https://github.com/xicodomingues/francinette.git ~/francinette
+        cd ~/francinette
+        bash "./bin/install.sh"
+        if bash ./tester.sh --help; then
+            echo "Francinette installation completed"
+        else
+            echo "Error: Francinette installation failed"
+            exit 1
+        fi
+
+    - name: Verify Francinette installation
+      run: |
+        cd ~/francinette
+        if bash ./bin/update.sh | grep -q "Francinette is updated"; then
+            echo "Francinette se ha instalado correctamente."
+        fi
+
+    - name: List repository contents
+      run: |
+        cd ~/work/42-Cursus-September-2024-00-Libft/42-Cursus-September-2024-00-Libft
+        echo "Current directory: $(pwd)"
+        ls -la
+        cd ~/francinette
+        echo "Current directory: $(pwd)"
+        ls -la
+
+    - name: Install Norminette
+      run: |
+        cd ~
+        sudo apt update
+        sudo apt install python3-setuptools
+        sudo apt install pipx
+        pipx install norminette
+        pipx ensurepath
+        echo "Norminette version:"
+        norminette -v || echo "Failed to get Norminette version"
+        echo "Current directory: $(pwd)"
+        ls -la
+        echo "Norminette location:"
+        whereis norminette
+      shell: /usr/bin/bash -e {0}
+      env:
+        pythonLocation: /opt/hostedtoolcache/Python/3.12.6/x64
+        LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.6/x64/lib
+
+    - name: Run Norminette
+      run: |
+        echo "Norminette location:"
+        whereis norminette
+        echo "Norminette version:"
+        norminette -v || echo "Failed to get Norminette version"
+        cd ~/work/42-Cursus-September-2024-00-Libft/42-Cursus-September-2024-00-Libft
+        echo "Current directory: $(pwd)"
+        ls -la
+        norminette
+      shell: /usr/bin/bash -e {0}
+
+    - name: Run Francinette
+      id: check_phrase
+      run: |
+        rm -rf ~/work/42-Cursus-September-2024-00-Libft/42-Cursus-September-2024-00-Libft_tmp
+        cp -r ~/work/42-Cursus-September-2024-00-Libft/42-Cursus-September-2024-00-Libft ~/work/42-Cursus-September-2024-00-Libft/42-Cursus-September-2024-00-Libft_tmp
+        cd ~/work/42-Cursus-September-2024-00-Libft/42-Cursus-September-2024-00-Libft_tmp
+        echo "Current directory: $(pwd)"
+        ls -la
+        echo "Norminette version:"
+        norminette -v || echo "Failed to get Norminette version"
+        echo "Ejecutando Francinette:"
+        bash ~/francinette/tester.sh | tee output.log
+        search_result=$(grep -rnil "All tests passed! Congratulations!" .)
+        echo "Search result: $search_result"
+        if echo "$search_result" | grep -q "output.log"; then
+          echo "output.log found containing 'All tests passed! Congratulations!'."
+          echo "FOUND_PHRASE=true" >> $GITHUB_ENV
+        else
+          echo "FOUND_PHRASE=false" >> $GITHUB_ENV
+        fi
+        echo ""
+        echo "Emulacion Moulinette:"
+        cat ~/francinette/temp/libft/war-machine/deepthought
+        echo ""
+        echo "Errores encontrados:"
+        cat ~/francinette/temp/libft/war-machine/errors.log
+        ls -la ~/francinette/temp/libft/
+        cp output.log ~/francinette/temp/francinette_output.log
+        echo "Current directory: $(pwd)"
+        ls -la
+        ls -la ~/francinette/temp/
+
+    - name: Create tarball of Francinette Export Tests
+      run: |
+        cd ~
+        tar -czf francinette_exp_tst.tar.gz francinette/temp/
+
+    - name: Upload Francinette Export Tests artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: francinette-exp-test
+        path: ~/francinette_exp_tst.tar.gz
+        if-no-files-found: warn
+
+    - name: Upload libft.a artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: libft-a
+        path: ~/work/42-Cursus-September-2024-00-Libft/42-Cursus-September-2024-00-Libft/libft.a
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+

@@ -47,14 +47,14 @@ jobs:
             exit 1
         fi
 
-    - name: Install dependencies bonus
-      run: |
-        if [ -f "Makefile" ]; then
-            make bonus
-        else
-            echo "Makefile not found"
-            exit 1
-        fi
+#    - name: Install dependencies bonus
+#      run: |
+#        if [ -f "Makefile" ]; then
+#            make bonus
+#        else
+#            echo "Makefile not found"
+#            exit 1
+#        fi
 
     - name: Set up Python
       uses: actions/setup-python@v2

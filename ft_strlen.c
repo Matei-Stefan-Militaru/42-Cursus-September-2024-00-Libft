@@ -24,12 +24,3 @@ size_t	ft_strlen(const char *str)
 	}
 	return (count);
 }
-/*
-int	main(void)
-{
-	char	*str;
-	
-	str = "papita";
-	write(1, str, ft_strlen(str));
-}
-*/

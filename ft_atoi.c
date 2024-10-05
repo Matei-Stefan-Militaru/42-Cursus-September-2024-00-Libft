@@ -37,7 +37,7 @@ int	ft_atoi(const char *str)
 	return (result * sign);
 }
 
-/*
+
 void print_string(const char *str)
 {
 	while (*str)
@@ -96,4 +96,3 @@ int	main()
 	}
 	
 }
-*/

@@ -18,15 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	char	c;
-	
-	c = '=';
-	if (ft_isalpha(c))
-		write(1, "c is alpha", 10);
-	else
-		write(1, "c is not alpha", 14);
-}
-*/

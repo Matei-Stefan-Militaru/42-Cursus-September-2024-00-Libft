@@ -18,16 +18,3 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-
-/*
-int	main(void)
-{
-	int	c;
-	
-	c = 130;
-	if (ft_isascii(c))
-		write(1, "c is ascii", 10);
-	else
-		write(1, "c is not ascii", 14);
-}
-*/

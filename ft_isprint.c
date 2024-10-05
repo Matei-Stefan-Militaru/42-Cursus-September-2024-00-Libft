@@ -18,15 +18,3 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
-/*
-int	main(void)
-{
-	int	i;
-	
-	i = 123;
-	if (ft_isprint(i))
-		write(1, "c is printable", 10);
-	else
-		write(1, "c is not printable", 14);
-}
-*/

@@ -21,7 +21,8 @@ if [ $# -eq 0 ]; then
 fi
 
 # Formatear el número a dos dígitos
-number=$(printf "%02d" $1)
+number=$(printf "%02d" "$1" 2>/dev/null || echo "$1")
+
 
 # Verificar si el número está en el rango válido
 if [ $number -lt 1 ] || [ $number -gt 43 ]; then

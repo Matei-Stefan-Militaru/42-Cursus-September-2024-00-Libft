@@ -1,6 +1,10 @@
-To execute the compile.sh file, you need libft.a. Use make, then make clean.
-Run the command bash compile.sh or ./compile.sh to see the options.
+To execute the compile.sh file, you need libft.a. Run make, followed by make clean.
+
+Use the command bash compile.sh or ./compile.sh to see the available options.
+
 To view the numbers, refer to the table below. Execute the command above using one of the following numbers as a parameter.
+
+Note: Due to formatting, the valid numbers range from 1 to 43. Numbers like 08 or 09 are not accepted.
 
 First Part:
 

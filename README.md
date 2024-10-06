@@ -17,8 +17,8 @@ First Part:
 | 05     | [isprint](ft_isprint.c)  | ✅       |✅       | ✅       |
 | 06     | [strlen](ft_strlen.c)   | ✅       |✅       | ✅       |
 | 07     | [memset](ft_memset.c)   | ✅       |✅       | ✅       |
-| 08     | [bzero](ft_bzero.c)    | ✅       |🚧       |🚧       |
-| 09     | [memcpy](ft_memcpy.c)   | ✅       |🚧      | 🚧       |
+| 08     | [bzero](ft_bzero.c)    | ✅       |✅       | ✅       |
+| 09     | [memcpy](ft_memcpy.c)   | ✅       |✅      | ✅       |
 | 10     | [memmove](ft_memmove.c)   | ✅       |🚧       | 🚧       |
 | 11     | [strlcpy](ft_strlcpy.c)   | ✅       |🚧       | 🚧       |
 | 12     | [strlcat](ft_strlcat.c)   | ✅       |🚧       | 🚧       |

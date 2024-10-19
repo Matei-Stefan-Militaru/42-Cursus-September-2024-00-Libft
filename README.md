@@ -31,30 +31,30 @@ First Part:
 | 19     | [memcmp](ft_memcmp.c)   | ✅       |✅      | ✅       | ✅       |
 | 20     | [strnstr](ft_strnstr.c)    | ✅       |✅      | ✅       | ✅       |
 | 21     | [atoi](ft_atoi.c)   | ✅       |✅      | ✅       | ✅       |
-| 22     | [calloc](ft_calloc.c)   | ✅       |🚧       | 🚧      | 🚧       |
-| 23     | [strdup](ft_strdup.c)   | ✅       |🚧       |🚧       | 🚧       |
+| 22     | [calloc](ft_calloc.c)   | ✅       |✅      | ✅       | ✅       |
+| 23     | [strdup](ft_strdup.c)   | ✅       |✅      | ✅       | ✅       |
 
 Second Part:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
 |--------|-------------|---------||---------|---------||---------|
-| 24     | [ft_substr](ft_substr.c)   | ✅      |🚧       | 🚧       | 🚧       |
-| 25     | [ft_strjoin](ft_strjoin.c)  | ✅      | 🚧      | 🚧      | 🚧       |
-| 26     | [ft_strtrim](ft_strtrim.c) | 🚧      |🚧      | 🚧      | 🚧       |
-| 27     | [ft_split](ft_split.c)  | 🚧      |🚧      | 🚧      | 🚧       |
-| 28     | [ft_itoa](ft_itoa.c)  | 🚧      |🚧      | 🚧      | 🚧       |
-| 29     | [ft_strmapi](ft_strmapi.c)  | 🚧      |🚧      | 🚧      | 🚧       |
-| 30     | [ft_striteri](ft_striteri.c)   | 🚧      |🚧      | 🚧      | 🚧       |
-| 31     | [ft_putchar_fd](ft_putchar_fd.c)   | 🚧      |🚧      | 🚧      | 🚧       |
-| 32     | [ft_putstr_fd](ft_putstr_fd.c)    | 🚧      |🚧      | 🚧      | 🚧       |
-| 33     | [ft_putendl_fd](ft_putendl_fd.c)   | 🚧      |🚧      | 🚧      | 🚧       |
-| 34     | [ft_putnbr_fd](ft_putnbr_fd.c)   | 🚧      |🚧      | 🚧      | 🚧       |
+| 24     | [ft_substr](ft_substr.c)   | ✅      |✅      | ✅       | ✅       |
+| 25     | [ft_strjoin](ft_strjoin.c)  | ✅      |✅      | ✅       | ✅       |
+| 26     | [ft_strtrim](ft_strtrim.c) | ✅      |✅      | ✅       | ✅       |
+| 27     | [ft_split](ft_split.c)  | ✅      |✅      | ✅       | ✅       |
+| 28     | [ft_itoa](ft_itoa.c)  | ✅      |✅      | ✅       | ✅       |
+| 29     | [ft_strmapi](ft_strmapi.c)  | ✅      |✅      | ✅       | ✅       |
+| 30     | [ft_striteri](ft_striteri.c)   | ✅      |✅      | ✅       | ✅       |
+| 31     | [ft_putchar_fd](ft_putchar_fd.c)   | ✅      |✅      | ✅       | ✅       |
+| 32     | [ft_putstr_fd](ft_putstr_fd.c)    | ✅      |✅      | ✅       | ✅       |
+| 33     | [ft_putendl_fd](ft_putendl_fd.c)   | ✅      |✅      | ✅       | ✅       |
+| 34     | [ft_putnbr_fd](ft_putnbr_fd.c)   | ✅      |✅      | ✅       | ✅       |
 
 Bonus:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
 |--------|-------------|---------||---------|---------||---------|
-| 35     | [ft_lstnew](ft_lstnew.c)   | ☐      |☐      | ☐      | ☐       |
+| 35     | [ft_lstnew](ft_lstnew.c)   | ✅      |✅      | ✅       | ✅       |
 | 36     | [ft_lstadd_front](ft_lstadd_front.c)   | ☐      |☐      | ☐      | ☐       |
 | 37     | [ft_lstsize](ft_lstsize.c)   | ☐      |☐      | ☐      | ☐       |
 | 38     | [ft_lstlast](ft_lstlast.c)   | ☐      |☐      | ☐      | ☐       |

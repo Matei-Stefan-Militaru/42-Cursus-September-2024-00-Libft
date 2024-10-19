@@ -9,7 +9,7 @@ Note: Due to formatting, the valid numbers range from 1 to 43. Numbers like 08 o
 First Part:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
-|--------|-------------|---------|-------------|---------|---------|
+|--------|-------------|---------||---------|---------||---------|
 | 01     | [isalpha](ft_isalpha.c)  | ✅       | ✅      | ✅       | ✅       |
 | 02     | [isdigit](ft_isdigit.c) | ✅       |✅       | ✅       | ✅       |
 | 03     | [isalnum](ft_isalnum.c)  | ✅       |✅       | ✅       | ✅       |
@@ -24,20 +24,20 @@ First Part:
 | 12     | [strlcat](ft_strlcat.c)   | ✅       |✅      | ✅       | ✅       |
 | 13     | [toupper](ft_toupper.c)  | ✅       |✅      | ✅       | ✅       |
 | 14     | [tolower](ft_tolower.c) | ✅       |✅      | ✅       | ✅       |
-| 15     | [strchr](ft_strchr.c)  | ✅       |🚧       | 🚧       | 🚧       |
-| 16     | [strrchr](ft_strrchr.c)  | ✅       |🚧       | 🚧       | 🚧       |
-| 17     | [strncmp](ft_strncmp.c)  | ✅       |🚧       |🚧       | 🚧       |
-| 18     | [memchr](ft_memchr.c)   | ✅       |🚧       | 🚧       | 🚧       |
-| 19     | [memcmp](ft_memcmp.c)   | ✅       |🚧       | 🚧       | 🚧       |
-| 20     | [strnstr](ft_strnstr.c)    | ✅       |🚧      | 🚧       | 🚧       |
-| 21     | [atoi](ft_atoi.c)   | ✅       |🚧       | 🚧       | 🚧       |
+| 15     | [strchr](ft_strchr.c)  | ✅       |✅      | ✅       | ✅       |
+| 16     | [strrchr](ft_strrchr.c)  | ✅       |✅      | ✅       | ✅       |
+| 17     | [strncmp](ft_strncmp.c)  | ✅       |✅      | ✅       | ✅       |
+| 18     | [memchr](ft_memchr.c)   | ✅       |✅      | ✅       | ✅       |
+| 19     | [memcmp](ft_memcmp.c)   | ✅       |✅      | ✅       | ✅       |
+| 20     | [strnstr](ft_strnstr.c)    | ✅       |✅      | ✅       | ✅       |
+| 21     | [atoi](ft_atoi.c)   | ✅       |✅      | ✅       | ✅       |
 | 22     | [calloc](ft_calloc.c)   | ✅       |🚧       | 🚧      | 🚧       |
 | 23     | [strdup](ft_strdup.c)   | ✅       |🚧       |🚧       | 🚧       |
 
 Second Part:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
-|--------|-------------|---------|-------------|---------|---------|
+|--------|-------------|---------||---------|---------||---------|
 | 24     | [ft_substr](ft_substr.c)   | ✅      |🚧       | 🚧       | 🚧       |
 | 25     | [ft_strjoin](ft_strjoin.c)  | ✅      | 🚧      | 🚧      | 🚧       |
 | 26     | [ft_strtrim](ft_strtrim.c) | 🚧      |🚧      | 🚧      | 🚧       |
@@ -53,7 +53,7 @@ Second Part:
 Bonus:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
-|--------|-------------|---------|-------------|---------|---------|
+|--------|-------------|---------||---------|---------||---------|
 | 35     | [ft_lstnew](ft_lstnew.c)   | ☐      |☐      | ☐      | ☐       |
 | 36     | [ft_lstadd_front](ft_lstadd_front.c)   | ☐      |☐      | ☐      | ☐       |
 | 37     | [ft_lstsize](ft_lstsize.c)   | ☐      |☐      | ☐      | ☐       |

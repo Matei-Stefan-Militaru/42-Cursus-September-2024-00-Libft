@@ -39,18 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-/*
-int	main()
-{
-	char	str[] = "Hello World";
-	
-	write(1, "Contenido original: ", 20);
-	write(1, str, 12);
-	write(1, "\n", 1);
-	ft_memmove(str + 7, str, 6);
-	write(1, "Contenido despues de ft_memmove: ", 35);
-	write(1, str, 12);
-	write(1, "\n", 1);
-}
-*/

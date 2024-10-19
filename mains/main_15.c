@@ -1,59 +1,45 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_15.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmilitar <mmilitar@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/19 16:39:43 by mmilitar          #+#    #+#             */
+/*   Updated: 2024/10/19 16:39:49 by mmilitar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_putstr(const char *str)
-{
-	while (*str)
-	{
-		write(1, str, 1);
-		str++;
-	}
-}
-
-void	ft_putnbr(int n)
-{
-	char	c;
-
-	if (n >= 10)
-		ft_putnbr(n / 10);
-	c = (n % 10) + '0';
-	write(1, &c, 1);
-}
-
-void	print_result(const char *test_str, char c)
+static void	test_strchr(const char *s, int c, const char *test_name)
 {
 	char	*result;
-	int		pos;
 
-	ft_putstr("Buscando '");
-	write(1, &c, 1);
-	ft_putstr("' en: \"");
-	ft_putstr(test_str);
-	ft_putstr("\"\n");
-	result = ft_strchr(test_str, c);
-	if (result != NULL)
-	{
-		pos = result - test_str;
-		ft_putstr("Encontrado en posicion: ");
-		ft_putnbr(pos);
-		ft_putstr("\n");
-	}
+	printf("\n=== Test: %s ===\n", test_name);
+	printf("Input string: \"%s\"\n", s);
+	printf("Character to find: '%c' (ASCII: %d)\n", c, c);
+	result = ft_strchr(s, c);
+	if (result)
+		printf("Output: Found at position: %ld\n", result - s);
 	else
-		ft_putstr("No encontrado\n");
-	ft_putstr("---------------\n");
+		printf("Output: Character not found.\n");
+	printf("===========================\n");
+}
+
+static void	run_strchr_tests(void)
+{
+	test_strchr("Hello, World!", 'o', "Basic test (character present)");
+	test_strchr("Hello, World!", 'x', "Character not present");
+	test_strchr("Hello, World!", '\0', "Null terminator");
+	test_strchr("", 'a', "Empty string");
+	test_strchr("Sample string", 'S', "Uppercase letter");
 }
 
 int	main(void)
 {
-	const char	*test_str;
-
-	test_str = "Hola Mundo";
-	ft_putstr("TEST FT_STRCHR\n");
-	ft_putstr("===============\n");
-	print_result(test_str, 'H');		// Prueba inicio 
-	print_result(test_str, 'M');		// Prueba medio 
-	print_result(test_str, 'o');		// Prueba duplicado 
-	print_result(test_str, '\0');	// Prueba null terminator
-	print_result(test_str, 'z');		// Prueba no encontrado 
+	printf("Testing ft_strchr function\n\n");
+	run_strchr_tests();
+	printf("\nAll tests completed.\n");
 	return (0);
 }

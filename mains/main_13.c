@@ -1,34 +1,43 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main_13.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmilitar <mmilitar@student.42barcelon      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/19 16:35:02 by mmilitar          #+#    #+#             */
+/*   Updated: 2024/10/19 16:35:07 by mmilitar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 
-void	ft_putchar(char c)
+static void	test_toupper(int c, const char *test_name)
 {
-	write(1, &c, 1);
+	int	return_value;
+
+	printf("\n=== Test: %s ===\n", test_name);
+	printf("Input character: '%c' (ASCII: %d)\n", c, c);
+	return_value = ft_toupper(c);
+	printf("Output character: '%c' (ASCII: %d)\n", return_value, return_value);
+	printf("===========================\n");
 }
 
-void	print_result(char c)
+static void	run_toupper_tests(void)
 {
-	char	result;
-
-	write(1, "Original: '", 11);
-	ft_putchar(c);
-	write(1, "' -> Mayuscula: '", 16);
-	result = ft_toupper(c);
-	ft_putchar(result);
-	write(1, "'\n", 2);
+	test_toupper('a', "Lowercase letter");
+	test_toupper('z', "Lowercase letter");
+	test_toupper('A', "Uppercase letter (no change)");
+	test_toupper('Z', "Uppercase letter (no change)");
+	test_toupper('1', "Numeric character");
+	test_toupper('!', "Special character");
+	test_toupper('\0', "Null character");
 }
 
 int	main(void)
 {
-	char	test_chars[] = "abcxyzABCXYZ123!@#";
-	int		i;
-
-	i = 0;
-	write(1, "Prueba de ft_toupper:\n", 21);
-	write(1, "-------------------\n", 20);
-	while (test_chars[i] != '\0')
-	{
-		print_result(test_chars[i]);
-		i++;
-	}
+	printf("Testing ft_toupper function\n\n");
+	run_toupper_tests();
+	printf("\nAll tests completed.\n");
 	return (0);
 }

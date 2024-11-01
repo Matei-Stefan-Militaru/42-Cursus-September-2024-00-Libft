@@ -9,7 +9,7 @@ Note: Due to formatting, the valid numbers range from 1 to 43. Numbers like 08 o
 First Part:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
-|--------|-------------|---------||---------|---------||---------|
+|--------|-------------|-------|---------|---------||---------|
 | 01     | [isalpha](ft_isalpha.c)  | ✅       | ✅      | ✅       | ✅       |
 | 02     | [isdigit](ft_isdigit.c) | ✅       |✅       | ✅       | ✅       |
 | 03     | [isalnum](ft_isalnum.c)  | ✅       |✅       | ✅       | ✅       |
@@ -37,7 +37,7 @@ First Part:
 Second Part:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
-|--------|-------------|---------||---------|---------||---------|
+|--------|-------------|---------|---------|---------||---------|
 | 24     | [ft_substr](ft_substr.c)   | ✅      |✅      | ✅       | ✅       |
 | 25     | [ft_strjoin](ft_strjoin.c)  | ✅      |✅      | ✅       | ✅       |
 | 26     | [ft_strtrim](ft_strtrim.c) | ✅      |✅      | ✅       | ✅       |
@@ -53,7 +53,7 @@ Second Part:
 Bonus:
 
 | Number | Function    | Done  | Testing  | English  | Norminette  |
-|--------|-------------|---------||---------|---------||---------|
+|--------|-------------|---------|---------|---------||---------|
 | 35     | [ft_lstnew](ft_lstnew.c)   | ✅      |✅      | ✅       | ✅       |
 | 36     | [ft_lstadd_front](ft_lstadd_front.c)   | ☐      |☐      | ☐      | ☐       |
 | 37     | [ft_lstsize](ft_lstsize.c)   | ☐      |☐      | ☐      | ☐       |

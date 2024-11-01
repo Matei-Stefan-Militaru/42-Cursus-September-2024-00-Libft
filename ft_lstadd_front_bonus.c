@@ -1,38 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mmilitar <mmilitar@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 21:19:14 by mmilitar          #+#    #+#             */
-/*   Updated: 2024/10/19 21:19:15 by mmilitar         ###   ########.fr       */
+/*   Created: 2024/11/01 20:41:48 by mmilitar          #+#    #+#             */
+/*   Updated: 2024/11/01 20:43:05 by mmilitar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	char	c;
-
-	if (n == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
+	if (new == NULL)
 		return ;
-	}
-	if (n < 0)
+	if (*lst == NULL)
 	{
-		write(fd, "-", 1);
-		n = -n;
+		*lst = new;
+		new -> next = NULL;
 	}
-	if (n == 0)
+	else
 	{
-		write(fd, "0", 1);
-		return ;
+		new -> next = *lst;
+		*lst = new;
 	}
-	if (n >= 10)
-		ft_putnbr_fd(n / 10, fd);
-	c = (n % 10) + '0';
-	write(fd, &c, 1);
 }
